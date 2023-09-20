@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvInitialPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="Initial Price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/etInitialPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvExcludingTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="monospace"
+        android:text="(excluding tax)"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvAmountSaved"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmountSaved" />
+
+    <EditText
+        android:id="@+id/etInitialPrice"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
+        android:ems="8"
+        android:fontFamily="monospace"
+        android:hint="10.00"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvInitialPriceLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAmountSavedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="monospace"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAmountSaved"
+        app:layout_constraintStart_toEndOf="@+id/tvAmountSaved"
+        app:layout_constraintTop_toBottomOf="@+id/etTaxPercentage"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="19.96" />
+
+    <TextView
+        android:id="@+id/tvFinalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="monospace"
+        android:text="Final Price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvAmountSaved"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmountSaved" />
+
+    <EditText
+        android:id="@+id/etTaxPercentage"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvPercentageTax"
+        app:layout_constraintTop_toBottomOf="@+id/etPercentageDiscount" />
+
+    <TextView
+        android:id="@+id/tvPercentageDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="monospace"
+        android:text="Discount (%)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvInitialPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvInitialPriceLabel" />
+
+    <TextView
+        android:id="@+id/tvAmountSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="monospace"
+        android:text="Amount Saved"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvPercentageTax"
+        app:layout_constraintTop_toBottomOf="@+id/tvPercentageTax" />
+
+    <TextView
+        android:id="@+id/tvFinalPriceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFinalPrice"
+        app:layout_constraintStart_toEndOf="@+id/tvFinalPrice"
+        app:layout_constraintTop_toBottomOf="@+id/etTaxPercentage"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="103.11" />
+
+    <EditText
+        android:id="@+id/etPercentageDiscount"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvPercentageDiscount"
+        app:layout_constraintTop_toBottomOf="@+id/etInitialPrice" />
+
+    <TextView
+        android:id="@+id/tvPercentageTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="monospace"
+        android:text="Tax (%)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvPercentageDiscount"
+        app:layout_constraintTop_toBottomOf="@+id/tvPercentageDiscount" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Have a lovely day! ❤️"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="monospace"
+        android:text="Sale Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
